@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tween : MonoBehaviour
+public class Tween 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform Target { get; protected set; }
+    public Vector3 StartPos { get; protected set; }
+    public Vector3 EndPos { get; protected set; }
+    public float StartTime { get; protected set; }
+    public float Duration { get; protected set; }
 
-    // Update is called once per frame
-    void Update()
+    public Tween(Transform gameObject, Vector3 startPos, Vector3 endPos, float startTime, float duration)
     {
-        
-    }
+        Target = gameObject;
+        StartPos = startPos;
+        EndPos = endPos;
+        StartTime = startTime;
+        Duration = duration;
+	}
+
 }
