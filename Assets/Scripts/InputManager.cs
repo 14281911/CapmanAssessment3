@@ -11,7 +11,6 @@ public class InputManager : MonoBehaviour
 
     private Vector3 capmanRight, capmanUp, capmanLeft, capmanDown;
 
-    // Start is called before the first frame update
     void Start()
     {
         tweener = GetComponent<Tweener>();
